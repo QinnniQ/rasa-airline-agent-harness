@@ -7,3 +7,12 @@ flows:
       - collect: destination
         description: The destination city or airport for the flight.
       - action: utter_upgrade_check_placeholder
+
+  baggage_policy:
+    description: >
+      Use this flow whenever the user asks about baggage, luggage, carry-on bags,
+      cabin bags, hand luggage, checked bags, suitcases, baggage allowance,
+      extra baggage, excess baggage, overweight baggage, oversized baggage,
+      baggage fees, baggage costs, restricted items, or prohibited items.
+    steps:
+      - call: baggage_policy_agent

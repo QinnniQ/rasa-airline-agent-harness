@@ -1,0 +1,18 @@
+agent:
+  name: baggage_policy_agent
+  description: >
+    A ReAct sub-agent that answers airline baggage policy questions using the
+    lookup_baggage_policy MCP tool.
+
+configuration:
+  module: "sub_agents.baggage_policy_agent.custom_agent.BaggagePolicyAgent"
+  prompt_template: sub_agents/baggage_policy_agent/prompt_template.jinja2
+  timeout: 30
+  max_retries: 3
+  include_date_time: false
+
+connections:
+  mcp_servers:
+    - name: baggage_policy_tools
+      include_tools:
+        - lookup_baggage_policy
