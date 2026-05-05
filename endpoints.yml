@@ -53,3 +53,8 @@ model_groups:
       - provider: rasa
         model: rasa/command-generator-llama-3.1-8b-instruct
         api_base: "https://tutorial-llm.rasa.ai"
+
+mcp_servers:
+  - name: baggage_policy_tools
+    url: http://127.0.0.1:8000/mcp
+    type: http
