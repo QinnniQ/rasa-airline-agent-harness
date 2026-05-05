@@ -1,0 +1,53 @@
+# Python virtual environments
+.venv/
+.venv_py3110_backup/
+venv/
+env/
+
+# Python cache/build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Rasa generated files
+models/
+results/
+.rasa/cache/
+.rasa/llms.txt
+.rasa/*.db
+*.tar.gz
+.rasa/cache/
+.rasa/llms.txt
+.rasa/llms-full.txt
+
+# Local environment / secrets
+.env
+.env.*
+*.key
+*.pem
+*.crt
+
+# Logs
+*.log
+logs/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+# VS Code local user settings
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/mcp.json
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/

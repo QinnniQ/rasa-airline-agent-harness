@@ -1,0 +1,9 @@
+flows:
+  flight_upgrade:
+    description: Help users check whether their flight booking may be eligible for an upgrade.
+    steps:
+      - collect: booking_reference
+        description: The passenger booking reference or reservation code.
+      - collect: destination
+        description: The destination city or airport for the flight.
+      - action: utter_upgrade_check_placeholder

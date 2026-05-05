@@ -1,0 +1,36 @@
+version: "3.1"
+
+slots:
+  booking_reference:
+    type: text
+    mappings:
+      - type: from_llm
+
+  destination:
+    type: text
+    mappings:
+      - type: from_llm
+
+responses:
+  utter_ask_booking_reference:
+    - text: "Sure, I can help check upgrade eligibility. What is your booking reference?"
+
+  utter_ask_destination:
+    - text: "Thanks. What is the destination for this flight?"
+
+  utter_upgrade_check_placeholder:
+    - text: "Thanks. I have your booking reference as {booking_reference} and your destination as {destination}. I’ll now check whether this flight may be eligible for an upgrade."
+
+  utter_free_chitchat_response:
+    - text: "placeholder"
+      metadata:
+        rephrase: True
+        rephrase_prompt: |
+          The following is a conversation with an AI assistant built with Rasa.
+          The assistant can help users with airline customer service tasks, especially checking whether a flight booking may be eligible for an upgrade.
+          The assistant is helpful, clear, professional, and friendly.
+          The user is making small talk, and the assistant should respond naturally while staying available to help with flight-related questions.
+          Context / previous conversation with the user:
+          {{history}}
+          {{current_input}}
+          Suggested AI Response:

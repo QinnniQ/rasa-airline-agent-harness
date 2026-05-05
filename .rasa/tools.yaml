@@ -1,0 +1,5 @@
+mode: stdio
+project_path: C:\Users\nicho\Documents\rasa-airline-agent-harness
+docs_mode: offline
+ide_integrations:
+- vscode

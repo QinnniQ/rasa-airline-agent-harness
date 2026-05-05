@@ -1,0 +1,18 @@
+{
+  "servers": {
+    "rasa-tools": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "rasa",
+        "tools",
+        "run",
+        "--mode",
+        "stdio",
+        "--project-path",
+        "."
+      ]
+    }
+  }
+}
